@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+# Cria os volumes caso não existam
+echo "Criando volumes do Docker..."
+docker volume create evolution_store || true
+docker volume create evolution_instances || true
+docker volume create postgres_data || true
+docker volume create redis_data || true
+
 # Verifica se a pasta já existe
 if [ ! -d "evolution-api" ]; then
     echo "Clonando repositório evolution-api..."
