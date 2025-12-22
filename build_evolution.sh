@@ -38,8 +38,8 @@ done
 echo "PostgreSQL pronto!"
 
 # Cria o banco do n8n se não existir
-echo "Criando banco n8n_db se necessário..."
-docker exec -i evolution_postgres psql -U evolution -tc "SELECT 1 FROM pg_database WHERE datname = 'n8n_db'" | grep -q 1 || \
-docker exec -i evolution_postgres psql -U evolution -c "CREATE DATABASE n8n_db;"
+# echo "Criando banco n8n_db se necessário..."
+# docker exec -i evolution_postgres psql -U evolution -tc "SELECT 1 FROM pg_database WHERE datname = 'n8n_db'" | grep -q 1 || \
+# docker exec -i evolution_postgres psql -U evolution -c "CREATE DATABASE n8n_db;"
 
-echo "Build, containers e banco n8n prontos!"
+echo "Build finalizado, Database, N8N e EvolutionApi prontos!"
