@@ -58,9 +58,10 @@ services:
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
       - DB_POSTGRESDB_PORT=5432
-      - DB_POSTGRESDB_DATABASE=n8n_db
+      - DB_POSTGRESDB_DATABASE=evolution
       - DB_POSTGRESDB_USER=evolution
       - DB_POSTGRESDB_PASSWORD=evolution123
+      - DB_POSTGRESDB_SCHEMA=n8n
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=admin
