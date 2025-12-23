@@ -4,6 +4,7 @@ SERVER_TYPE=http
 SERVER_PORT=8080
 SERVER_URL=http://localhost:8080 
 
+#### BANCO DE DADOS ####
 DATABASE_PROVIDER=postgresql
 DATABASE_CONNECTION_URI=postgresql://evolution:evolution123@postgres:5432/evolution?schema=public
 DATABASE_CONNECTION_CLIENT_NAME=evolution_exchange
@@ -19,6 +20,7 @@ DATABASE_SAVE_IS_ON_WHATSAPP=true
 DATABASE_SAVE_IS_ON_WHATSAPP_DAYS=7
 DATABASE_DELETE_MESSAGE=true
 
+#### CACHE REDIS ####
 CACHE_REDIS_ENABLED=true
 CACHE_REDIS_URI=redis://evolution_redis:6379/6
 CACHE_REDIS_TTL=604800
@@ -26,10 +28,12 @@ CACHE_REDIS_PREFIX_KEY=evolution
 CACHE_REDIS_SAVE_INSTANCES=false
 CACHE_LOCAL_ENABLED=false
 
+#### LOGS ####
 LOG_LEVEL=ERROR,WARN,DEBUG,INFO,LOG,VERBOSE,DARK,WEBHOOKS,WEBSOCKET
 LOG_COLOR=true
 LOG_BAILEYS=error
 
+#### AUTENTICAÇÃO ####
 AUTHENTICATION_API_KEY=429683C4C977415CAAFCCE10F7D57E11
 AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
 LANGUAGE=en
@@ -265,11 +269,12 @@ WA_BUSINESS_URL=https://graph.facebook.com
 WA_BUSINESS_VERSION=v20.0
 WA_BUSINESS_LANGUAGE=en_US
 
+#### WEBHOOK PARA N8N (COMUNICAÇÃO ENTRE CONTAINERS) ####
 # Global Webhook Settings
 # Each instance's Webhook URL and events will be requested at the time it is created
 WEBHOOK_GLOBAL_ENABLED=false
 # Define a global webhook that will listen for enabled events from all instances
-WEBHOOK_GLOBAL_URL=''
+WEBHOOK_GLOBAL_URL=http://n8n:5678/webhook/evolution
 # With this option activated, you work with a url per webhook event, respecting the global url and the name of each event
 WEBHOOK_GLOBAL_WEBHOOK_BY_EVENTS=false
 # Set the events you want to hear
